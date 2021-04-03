@@ -1,0 +1,15 @@
+.fa{
+    font-size: x-large;
+    vertical-align: middle;
+}
+.fa-user-circle-o{
+    font-size: 50px;
+}
+.nav-item{
+   margin-left: 15px;
+}
+#usuario{
+    margin-right: -32px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
