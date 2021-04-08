@@ -1,0 +1,12 @@
+#fondo{
+    background-color: #bfd6e8;
+    min-height: 100%;
+}
+.btn{
+    background-color: #95a6ba;
+    color: white;
+}
+#contenido{
+    background-color: #323d51;
+    min-height: 100%;
+}

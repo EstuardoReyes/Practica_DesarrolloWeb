@@ -7,6 +7,9 @@ import { RegistroComponent } from './components/registro/registro.component'
 import { PublicationListComponent } from './components/publication-list/publication-list.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { LoginComponent } from './components/login/login.component';
+import { PerfilOpcionesComponent } from './components/perfil-opciones/perfil-opciones.component';
+import { InformacionComponent } from './components/perfil-opciones/informacion/informacion.component';
+import { CursosAprComponent } from './components/perfil-opciones/cursos-apr/cursos-apr.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { LoginComponent } from './components/login/login.component';
     RegistroComponent,
     PublicationListComponent,
     NavigationBarComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilOpcionesComponent,
+    InformacionComponent,
+    CursosAprComponent
   ],
   imports: [
     BrowserModule,

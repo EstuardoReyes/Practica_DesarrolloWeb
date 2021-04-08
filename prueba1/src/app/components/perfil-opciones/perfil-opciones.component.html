@@ -1,0 +1,22 @@
+<div class="container-fluid py-5" id="fondo">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Nombre del perfil</h3>
+            <div class="d-grid gap-2 py-2">
+                <div class="btn-group-vertical" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="informacion" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" routerLink='info' for="informacion">Información</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="cursos" autocomplete="off">
+                    <label class="btn btn-outline-primary" routerLink='cursos-a' for="cursos">Cursos Aprobados</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-white col-6 offset-1">
+            <div class="container py-3" id="contenido">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
