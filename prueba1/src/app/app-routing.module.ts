@@ -1,3 +1,5 @@
+import { PublicationListComponent } from './components/publication-list/publication-list.component';
+import { OlvidarPassComponent } from './components/olvidar-pass/olvidar-pass.component';
 import { Component, NgModule } from '@angular/core';
 import { ChildrenOutletContexts, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component'
@@ -10,7 +12,7 @@ import { CursosAprComponent } from './components/perfil-opciones/cursos-apr/curs
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
@@ -37,7 +39,18 @@ const routes: Routes = [
         { path: 'info', component: InformacionComponent },
         { path: 'cursos-a', component: CursosAprComponent }
       ]}
-    ]
+    ]},
+  {
+    path: 'contraseña',
+    component: OlvidarPassComponent
+  },
+  {
+    path: 'home',
+    component: NavigationBarComponent
+  },
+  {
+    path: 'publicacion',
+    component: PublicationListComponent
   }
 ];
 

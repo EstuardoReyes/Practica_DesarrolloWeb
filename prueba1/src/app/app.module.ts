@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PerfilOpcionesComponent } from './components/perfil-opciones/perfil-opciones.component';
 import { InformacionComponent } from './components/perfil-opciones/informacion/informacion.component';
 import { CursosAprComponent } from './components/perfil-opciones/cursos-apr/cursos-apr.component';
+import { OlvidarPassComponent } from './components/olvidar-pass/olvidar-pass.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CursosAprComponent } from './components/perfil-opciones/cursos-apr/curs
     LoginComponent,
     PerfilOpcionesComponent,
     InformacionComponent,
-    CursosAprComponent
+    CursosAprComponent,
+    OlvidarPassComponent
   ],
   imports: [
     BrowserModule,
