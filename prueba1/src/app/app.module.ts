@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroComponent } from './components/registro/registro.component'
@@ -12,6 +12,9 @@ import { PerfilOpcionesComponent } from './components/perfil-opciones/perfil-opc
 import { InformacionComponent } from './components/perfil-opciones/informacion/informacion.component';
 import { CursosAprComponent } from './components/perfil-opciones/cursos-apr/cursos-apr.component';
 import { OlvidarPassComponent } from './components/olvidar-pass/olvidar-pass.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,10 @@ import { OlvidarPassComponent } from './components/olvidar-pass/olvidar-pass.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     FormsModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
