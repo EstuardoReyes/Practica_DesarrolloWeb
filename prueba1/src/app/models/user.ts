@@ -2,7 +2,7 @@ export interface Usuario {
     id: number;
     nombre: string;
     apellido: string;
-    carnet?: number;
+    carnet?: string;
     correo: string;
     pass: string
 }

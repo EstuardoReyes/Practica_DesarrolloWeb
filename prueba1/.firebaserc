@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "consultor-web-6813f": {
+      "hosting": {
+        "prueba1": [
+          "consultor-web-6813f"
+        ]
+      }
+    }
+  }
+}

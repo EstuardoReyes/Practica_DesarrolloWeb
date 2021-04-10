@@ -10,7 +10,8 @@ import { FormControl } from '@angular/forms';
 export class RegistroComponent implements OnInit {
 
     user: Usuario = {
-        id: 0,
+        id : 0,
+        carnet: '',
         nombre: '',
         apellido: '',
         correo: '',
