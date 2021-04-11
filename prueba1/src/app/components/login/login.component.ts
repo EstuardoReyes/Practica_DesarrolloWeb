@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     if (user) {
       this.isLogged = true;
       console.log('entro: ',usuario)
-      this.router.navigate(['/src/app/compoents/publication-list']);
+      this.router.navigate(['/home']);
     }
     } catch (error) {
 

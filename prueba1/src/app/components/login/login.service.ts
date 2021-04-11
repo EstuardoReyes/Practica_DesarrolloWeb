@@ -12,6 +12,13 @@ export class LoginService {
 
   constructor(public afAuth: AngularFireAuth) { }
     
+  async resetPass(email:string):Promise<void>{
+    try {
+      return this.afAuth.sendPasswordResetEmail(email);
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   async login(email : string , password:string){
     try {
