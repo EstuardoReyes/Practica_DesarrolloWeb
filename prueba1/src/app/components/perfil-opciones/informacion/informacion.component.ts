@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/models/user';
+import { Router } from '@angular/router';
+import { PerfilService } from '../perfil.service';
+
 
 @Component({
   selector: 'app-informacion',
@@ -7,7 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InformacionComponent implements OnInit {
 
-  constructor() { }
+  user: Usuario = {
+    nombre: '',
+    apellido: '',
+    correo: '',
+    pass: ''
+  }
+
+  constructor(private  usuariosSvc: PerfilService, private router: Router) { }
 
   ngOnInit(): void {
   }
