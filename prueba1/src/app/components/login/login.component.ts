@@ -11,15 +11,18 @@ import { LoginService } from './login.service'
   providers:[LoginService]
 })
 export class LoginComponent implements OnInit {
-
+  correo: string;
   user: Usuario = {
     nombre:'',
     apellido:'',
     correo:'',
     pass : ''
-  }
+  };
 
-  constructor(private loginSvc: LoginService, private router: Router) { }
+  constructor(private loginSvc: LoginService, private router: Router) {
+    this.correo=''
+    
+   }
   public isLogged = false;
   ngOnInit(): void {
   }

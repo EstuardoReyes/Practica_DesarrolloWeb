@@ -22,7 +22,7 @@ export class RegistroService {
     onSaveUsuario(usuario: Usuario): Promise<void>{
         return new Promise ( async (resolve,reject) => {
             try {
-               
+               console.log("guardo")
                 const ids =  usuario.carnet;
                 const data = {ids, ... usuario};  
                 const result = await this.UsuariosCollection.doc(ids).set(data)  

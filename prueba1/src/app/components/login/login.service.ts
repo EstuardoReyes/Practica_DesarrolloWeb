@@ -4,13 +4,19 @@ import { importExpr } from '@angular/compiler/src/output/output_ast';
 import { first } from 'rxjs/operators';
 import { auth } from 'firebase/app'
 import { User } from 'firebase'
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class LoginService {
+ 
+  private enviarCorreoSubject = new Subject<string>();
+  enviarCorreoObservable = this.enviarCorreoSubject.asObservable();
   
   
 
-  constructor(public afAuth: AngularFireAuth) { }
+  constructor(public afAuth: AngularFireAuth) { 
+  
+  }
     
   async resetPass(email:string):Promise<void>{
     try {
@@ -23,7 +29,9 @@ export class LoginService {
   async login(email : string , password:string){
     try {
       const result = await this.afAuth.signInWithEmailAndPassword(email,password);
-    } catch (error) {
+  
+      this.enviarCorreoSubject.next(email);
+          } catch (error) {
       console.log(error)
     }
     

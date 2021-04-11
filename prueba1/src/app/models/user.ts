@@ -3,5 +3,6 @@ export interface Usuario {
     apellido: string;
     carnet?: string;
     correo: string;
-    pass: string
+    pass: string;
+    cursos?: Array<string>;
 }
