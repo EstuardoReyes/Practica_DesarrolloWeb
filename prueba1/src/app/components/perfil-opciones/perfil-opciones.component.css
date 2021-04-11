@@ -9,4 +9,6 @@
 #contenido{
     background-color: #323d51;
     min-height: 100%;
+    padding: 3px 10px;
+    border-radius: 20px;
 }

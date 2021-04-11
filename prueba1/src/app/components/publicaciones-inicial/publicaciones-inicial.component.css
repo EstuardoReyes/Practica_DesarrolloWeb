@@ -1,0 +1,24 @@
+#fondo {
+  background: #bfd6e8;
+  min-height: 100%;
+}
+
+#cuadro {
+  background-color: #323d51;
+  min-height: 100%;
+  margin: 0px 250px 0px 300px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+#cuadro .public-comment{
+  background-color: #95a6ba;
+  min-height: 100%;
+  margin: 15px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.form-control{
+  min-height: 100%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}

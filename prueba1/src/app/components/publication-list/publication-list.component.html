@@ -1,59 +1,46 @@
-<div class="limiter">
-  <div routerLink="/">
-  </div>
-    <div class="container-login100">
-      <div class="wrap-login100 p-t-190 p-b-30">
-        <form class="login100-form validate-form">
-          <span class="login100-form-title p-t-20 p-b-45">
-            Crear publicación
-          </span>
+<div class="container-fluid py-5" id="fondo">
+  <div id="cuadro">
+    <span class="login100-form-title p-t-20 p-b-45">
+      Crear publicación
+    </span>
 
-          <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-            <input class="input100" type="text" name="username" placeholder="Nombre del usuario">
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
+    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+      <input class="input100" type="text" name="username" placeholder="Nombre del usuario">
+    </div>
 
-          <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-            <input class="input100" type="text" name="curso" placeholder="Curso o catedratico">
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
+    <div class="select">
+      <select>
+        <option value="">Escoja una:</option>
+        <option value="opcion-1">Curso</option>
+        <option value="opcion-2">Catedrático</option>
+      </select>
+    </div>
 
-          <div class="col-md-12">
-            <fieldset>
-              <textarea name="message" rows="5" margin-top=10px class="form-control" id="message" placeholder="Escriba su mensaje" required=""></textarea>
-            </fieldset>
-          </div>
+    <div class="col-md-12">
+      <fieldset>
+        <textarea name="message" rows="2" class="form-control" id="message" placeholder="Escriba su mensaje" required=""></textarea>
+      </fieldset>
+    </div>
 
-          <div class="wrap-input100 validate-input m-b-10" data-validate = "Date is required">
-            <input class="input100" type="text" name="date" placeholder="Fecha de creación">
-            <span class="focus-input100"></span>
-          </div>
+    <div class="wrap-input100 validate-input m-b-10" data-validate = "Date is required">
+      <input class="input100" type="text" name="date" placeholder="Fecha de creación">
+    </div>
 
-          <div class="container-login100-form-btn p-t-10">
-            <button class="login100-form-btn">
-              <a class="txt1">
-                Publicar
-              </a>
-            </button>
-          </div>
+    <div class="container-login100-form-btn p-t-10">
+      <button class="login100-form-btn">
+        <a class="txt1">
+          Publicar
+        </a>
+      </button>
+    </div>
 
-          <div class="text-center w-full p-t-25 p-b-230">
-            <a href="#" class="txt1">
-              <a class="txt1" href="/home">
-                Regresar
-              </a>
-            </a>
-          </div>
-        </form>
-      </div>
+    <div class="text-center w-full p-t-25 p-b-230">
+      <a href="#" class="txt1">
+        <a class="txt1" routerLink="/home/inicio">
+          Regresar
+        </a>
+      </a>
     </div>
   </div>
-
 
 <router-outlet></router-outlet>
