@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Usuario } from 'src/app/models/user';
 import { Router } from '@angular/router';
-import { PerfilService } from '../perfil.service';
 import { InformacionService } from './informacion.service';
 import firebase from 'firebase';
 
 
-=======
->>>>>>> 3bee4fc81c7706bda749d0d33ada886f7fdbea5c
 
 @Component({
   selector: 'app-informacion',
@@ -17,8 +13,8 @@ import firebase from 'firebase';
 
 })
 export class InformacionComponent implements OnInit {
-<<<<<<< HEAD
   user: Usuario = {
+    id:'',
     nombre: '',
     apellido: '',
     correo: '',
@@ -36,12 +32,6 @@ export class InformacionComponent implements OnInit {
      // this.correo = Response;
     //})
 
-=======
-
-  constructor() { }
-
-  ngOnInit(): void {
->>>>>>> 3bee4fc81c7706bda749d0d33ada886f7fdbea5c
   }
 
 }
