@@ -17,33 +17,6 @@
     margin: 10px;
 }
 
-.container-fondo {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #bfd6e8;
-}
-
-#cuadro {
-  background-color: #323d51;
-  width: 750px;
-  height: 575px;
-  margin: 76px 250px 76px 300px;
-  overflow-y: scroll;
-  text-align: left;
-}
-#cuadro .public-comment{
-  background-color: #95a6ba;
-  width: 700px;
-  height: 100px;
-  overflow-y: scroll;
-  margin: 15px;
-}
 
 
 

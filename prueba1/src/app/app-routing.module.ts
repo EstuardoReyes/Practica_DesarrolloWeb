@@ -1,3 +1,4 @@
+import { PublicacionesInicialComponent } from './components/publicaciones-inicial/publicaciones-inicial.component';
 import { PublicationListComponent } from './components/publication-list/publication-list.component';
 import { OlvidarPassComponent } from './components/olvidar-pass/olvidar-pass.component';
 import { Component, NgModule } from '@angular/core';
@@ -34,23 +35,18 @@ const routes: Routes = [
 
     children: [
       { path: 'public/add', component: LoginComponent},
+      { path: 'inicio', component: PublicacionesInicialComponent},
+      { path: 'publicacion', component: PublicationListComponent},
       { path: 'perfil', component: PerfilOpcionesComponent,
       children: [
         { path: 'info', component: InformacionComponent },
         { path: 'cursos-a', component: CursosAprComponent }
       ]}
+
     ]},
   {
     path: 'contraseña',
     component: OlvidarPassComponent
-  },
-  {
-    path: 'home',
-    component: NavigationBarComponent
-  },
-  {
-    path: 'publicacion',
-    component: PublicationListComponent
   }
 ];
 
