@@ -3,7 +3,7 @@ import { Usuario } from 'src/app/models/user';
 import { Router } from '@angular/router';
 import { PerfilService } from '../perfil.service';
 import { InformacionService } from './informacion.service';
-//import { LoginService } from '../../login/login.service';
+import firebase from 'firebase';
 
 
 
@@ -11,9 +11,9 @@ import { InformacionService } from './informacion.service';
   selector: 'app-informacion',
   templateUrl: './informacion.component.html',
   styleUrls: ['./informacion.component.css']
+
 })
 export class InformacionComponent implements OnInit {
-  correo: string;
   user: Usuario = {
     nombre: '',
     apellido: '',
@@ -21,16 +21,16 @@ export class InformacionComponent implements OnInit {
     pass: ''
   }
 
-  constructor( private  usuariosSvc: InformacionService, private router: Router) { 
-    this.correo = ''
+  constructor(private  usuariosSvc: InformacionService, private router: Router) { 
+   
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    const email = firebase.auth().currentUser?.email;
+    console.log(email);
    // this.servicioComunicacion.enviarCorreoObservable.subscribe(Response => {
      // this.correo = Response;
     //})
-    console.log(this.correo);
-    this.usuariosSvc.getLista();
 
   }
 

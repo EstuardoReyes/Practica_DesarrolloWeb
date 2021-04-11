@@ -4,13 +4,11 @@ import { importExpr } from '@angular/compiler/src/output/output_ast';
 import { first } from 'rxjs/operators';
 import { auth } from 'firebase/app'
 import { User } from 'firebase'
-import { Subject } from 'rxjs';
+
 
 @Injectable()
 export class LoginService {
  
-  private enviarCorreoSubject = new Subject<string>();
-  enviarCorreoObservable = this.enviarCorreoSubject.asObservable();
   
   
 
@@ -26,11 +24,11 @@ export class LoginService {
     }
   }
 
+ 
+
   async login(email : string , password:string){
     try {
       const result = await this.afAuth.signInWithEmailAndPassword(email,password);
-  
-      this.enviarCorreoSubject.next(email);
           } catch (error) {
       console.log(error)
     }
