@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/user';
 import { FormControl } from '@angular/forms';
 import { RegistroService } from './registro.service'
-import { LoginService} from './../login/login.service'
+
 @Component ({
     selector: 'app-registro',
     templateUrl: './registro.component.html',
-    styleUrls: ['./registro.component.css']
+    styleUrls: ['./registro.component.css'],
+    providers:[RegistroService]
 })
 export class RegistroComponent implements OnInit {
 
@@ -19,7 +20,7 @@ export class RegistroComponent implements OnInit {
         pass: ''
     };
 
-    constructor(private  usuariosSvc: RegistroService, private loginSvc: LoginService){}
+    constructor(private  usuariosSvc: RegistroService){}
 
     ngOnInit(): void {}
 
@@ -29,6 +30,6 @@ export class RegistroComponent implements OnInit {
         const usuario = this.user;
         const usuarioID = this.user.carnet;
         this.usuariosSvc.onSaveUsuario(usuario);
-        this.loginSvc.register(this.user.correo,this.user.pass)
+        this.usuariosSvc.register(usuario.correo,usuario.pass);
     }
 }

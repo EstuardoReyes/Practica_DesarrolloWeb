@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { RouterModule } from '@angular/router'
 import { AngularFireAuthModule } from '@angular/fire/auth';
+
  
 
 @NgModule({

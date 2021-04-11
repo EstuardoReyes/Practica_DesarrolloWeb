@@ -11,7 +11,7 @@ export class LoginService {
   
 
   constructor(public afAuth: AngularFireAuth) { }
-
+    
 
   async login(email : string , password:string){
     try {
