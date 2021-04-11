@@ -17,3 +17,8 @@
   padding: 3px 10px;
   border-radius: 20px;
 }
+.form-control{
+  min-height: 100%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}

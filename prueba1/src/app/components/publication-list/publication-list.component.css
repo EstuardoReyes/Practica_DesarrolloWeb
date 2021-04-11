@@ -5,8 +5,31 @@
 #cuadro {
   background-color: #323d51;
   min-height: 100%;
-  margin: 0px 250px 0px 300px;
+  margin: 0px 400px 0px 400px;
   text-align: left;
   padding: 3px 10px;
+  border-radius: 20px;
+}
+.select {
+  min-height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff no-repeat 100% center;
+  border-radius: 20px;
+}
+.select select {
+    padding: 5px 8px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+}
+.col-md-12{
+  min-height: 100%;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.form-control{
+  min-height: 100%;
   border-radius: 20px;
 }
