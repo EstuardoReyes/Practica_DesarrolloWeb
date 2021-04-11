@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/user';
 import { FormControl } from '@angular/forms';
 import { RegistroService } from './registro.service'
+import { Router } from '@angular/router';
 
 @Component ({
     selector: 'app-registro',
@@ -20,7 +21,7 @@ export class RegistroComponent implements OnInit {
         pass: ''
     };
 
-    constructor(private  usuariosSvc: RegistroService){}
+    constructor(private  usuariosSvc: RegistroService, private router: Router){}
 
     ngOnInit(): void {}
 
@@ -31,5 +32,6 @@ export class RegistroComponent implements OnInit {
         const usuarioID = this.user.carnet;
         this.usuariosSvc.onSaveUsuario(usuario);
         this.usuariosSvc.register(usuario.correo,usuario.pass);
+        this.router.navigate(['/login']);
     }
 }

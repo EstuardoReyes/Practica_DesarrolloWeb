@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/user';
 import { LoginService } from './login.service'
 
@@ -18,18 +19,24 @@ export class LoginComponent implements OnInit {
     pass : ''
   }
 
-  constructor(private loginSvc: LoginService) { }
+  constructor(private loginSvc: LoginService, private router: Router) { }
   public isLogged = false;
   ngOnInit(): void {
   }
 
   async Onlogin(){
     const usuario = this.user
-    this.loginSvc.login(usuario.correo,usuario.pass)
-    const user = await this.loginSvc.getUser();
+    try {
+      this.loginSvc.login(usuario.correo,usuario.pass)  
+      const user = await this.loginSvc.getUser();
     if (user) {
       this.isLogged = true;
       console.log('entro: ',usuario)
+      this.router.navigate(['/src/app/compoents/publication-list']);
+    }
+    } catch (error) {
+
+    
     }
   }
 }
