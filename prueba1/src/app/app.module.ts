@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,9 @@ import { CursosAprComponent } from './components/perfil-opciones/cursos-apr/curs
 import { OlvidarPassComponent } from './components/olvidar-pass/olvidar-pass.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
-
+import { RouterModule } from '@angular/router'
+import { AngularFireAuthModule } from '@angular/fire/auth';
+ 
 
 @NgModule({
   declarations: [
@@ -30,9 +32,13 @@ import { AngularFirestore } from '@angular/fire/firestore';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FormsModule
+    FormsModule,
+    // <—–
+    AngularFireAuthModule,
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
