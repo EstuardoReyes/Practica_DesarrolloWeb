@@ -7,7 +7,8 @@ import { PerfilService } from '../perfil.service';
 @Component({
   selector: 'app-informacion',
   templateUrl: './informacion.component.html',
-  styleUrls: ['./informacion.component.css']
+  styleUrls: ['./informacion.component.css'],
+  providers: [PerfilService]
 })
 export class InformacionComponent implements OnInit {
 
@@ -21,6 +22,10 @@ export class InformacionComponent implements OnInit {
   constructor(private  usuariosSvc: PerfilService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  mostrarDatos(){
+    
   }
 
 }
