@@ -5,12 +5,16 @@ import { first } from 'rxjs/operators';
 import { auth } from 'firebase/app'
 import { User } from 'firebase'
 
+
 @Injectable()
 export class LoginService {
+ 
   
   
 
-  constructor(public afAuth: AngularFireAuth) { }
+  constructor(public afAuth: AngularFireAuth) { 
+  
+  }
     
   async resetPass(email:string):Promise<void>{
     try {
@@ -20,10 +24,12 @@ export class LoginService {
     }
   }
 
+ 
+
   async login(email : string , password:string){
     try {
       const result = await this.afAuth.signInWithEmailAndPassword(email,password);
-    } catch (error) {
+          } catch (error) {
       console.log(error)
     }
     

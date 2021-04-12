@@ -18,7 +18,7 @@
 
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/publicacion"><i class="fa fa-plus-circle"></i> Crear Publicación</a>
+            <a class="nav-link" routerLink="publicacion"><i class="fa fa-plus-circle"></i> Crear Publicación</a>
           </li>
         </ul>
 
@@ -28,18 +28,4 @@
       </div>
     </div>
   </nav>
-
-  <div class="container-fondo" >
-    <div id="cuadro">
-      <div class="public-comment">
-
-      </div>
-      <div class="col-md-12">
-        <fieldset>
-          <textarea name="message" rows="1" class="form-control" id="message" placeholder="Escriba su comentario" required=""></textarea>
-          <button class="btn btn-outline-primary" type="submit">Comentar</button>
-        </fieldset>
-      </div>
-    </div>
-  </div>
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
