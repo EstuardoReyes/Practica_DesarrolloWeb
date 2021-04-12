@@ -5,25 +5,22 @@
     </span>
 
     <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-      <input class="input100" type="text" name="username" placeholder="Nombre del usuario">
+      <input class="input100" type="text" name="username" [(ngModel)]="public.asunto" placeholder="Tema de la publicacion">
     </div>
 
     <div class="select">
-      <select>
+      <select> <input class="input100" type="text" [(ngModel)]="user.carnet" name="carnet" placeholder="Registro académico">
         <option value="">Escoja una:</option>
         <option value="opcion-1">Curso</option>
         <option value="opcion-2">Catedrático</option>
       </select>
+
     </div>
 
     <div class="col-md-12">
       <fieldset>
-        <textarea name="message" rows="2" class="form-control" id="message" placeholder="Escriba su mensaje" required=""></textarea>
+        <textarea name="message" rows="2" class="form-control" [(ngModel)]="public.mensaje" id="message" placeholder="Escriba su mensaje" required=""></textarea>
       </fieldset>
-    </div>
-
-    <div class="wrap-input100 validate-input m-b-10" data-validate = "Date is required">
-      <input class="input100" type="text" name="date" placeholder="Fecha de creación">
     </div>
 
     <div class="container-login100-form-btn p-t-10">

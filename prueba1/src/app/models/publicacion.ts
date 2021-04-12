@@ -3,5 +3,5 @@ export interface Publicacion {
     asunto:string;
     creador: string;
     fecha: string;
-    idcomentarios: string;
+    comentarios?: Array<string>;
 }

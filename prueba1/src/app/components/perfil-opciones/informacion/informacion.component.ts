@@ -28,6 +28,7 @@ export class InformacionComponent implements OnInit {
   ngOnInit(){
     const email = firebase.auth().currentUser?.email;
     console.log(email);
+
    // this.servicioComunicacion.enviarCorreoObservable.subscribe(Response => {
      // this.correo = Response;
     //})
